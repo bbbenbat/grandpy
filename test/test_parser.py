@@ -22,19 +22,27 @@ def test_low_case():
 def test_delete_punctuation():
     """ Test delete_punctuation method from Checkdata Class. """
     req = pars.delete_punctuation(QUESTION)
-    result = "Salut GrandPy comment vas tu Peux tu me dire où se trouve l Arc de Triomphe "
+    result = "Salut GrandPy comment vas tu Peux tu me dire où " \
+             "se trouve l Arc de Triomphe "
     assert req == result
 
 def test_create_list():
     """ Test create_list method from Checkdata Class. """
-    req = pars.create_list(QUESTION)
-    result = ['Salut', 'GrandPy', 'comment', 'vas', 'tu', 'Peux', 'tu', 'me', 'dire', 'où', 'se', 'trouve', 'l', 'Arc', 'de', 'Triomphe']
+    question = "Salut GrandPy comment vas tu Peux " \
+               "tu me dire où se trouve l Arc de Triomphe "
+    req = pars.create_list(question)
+    result = ['Salut', 'GrandPy', 'comment', 'vas', 'tu', 'Peux',
+              'tu', 'me', 'dire', 'où', 'se', 'trouve', 'l', 'Arc',
+              'de', 'Triomphe']
     assert req == result
 
-"""def test_check_data_question():
-    """  """
+def test_find_word():
+    """ Test find_word method for Checkdata Class. """
+    question = ['salut', 'grandpy', 'comment', 'vas', 'tu',
+                'peux', 'tu', 'me', 'dire', 'où', 'se', 'trouve',
+                'l', 'arc', 'de', 'triomphe']
+    req = pars.find_word(question)
+    result = "où trouve arc triomphe "
+    assert str(req) == str(result)
 
-    result = "Arc de triomphe"
-    ret = pars.check_word(QUESTION)
-    result == ret"""
 
