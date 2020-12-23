@@ -32,7 +32,18 @@ class Checkdata:
 
     def find_word(self, req):
         """ Clean the string with keyword. """
-        return req
+        clean_list = []
+        result = ""
+        with open('D:/OCR/P7 - GrandPy/grandpy/app/models/fr.json') as f:
+            data = json.load(f)
+        data = data['key_words']
+        for var in req:
+            for var2 in data:
+                if str(var) == str(var2):
+                    clean_list.append(var)
+            if var not in clean_list:
+                result += var + ' '
+        return result
 
 
 
