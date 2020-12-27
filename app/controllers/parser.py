@@ -46,6 +46,10 @@ class Checkdata:
                 result += var + ' '
         return result
 
-
-
-
+    def parser_complet(self, req):
+        """ Use all methods from the Class to parse 'req'. """
+        req = self.low_case(req)
+        req = self.delete_punctuation(req)
+        req = self.create_list(req)
+        req = self.find_word(req)
+        return req
