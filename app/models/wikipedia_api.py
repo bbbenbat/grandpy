@@ -21,7 +21,7 @@ class WikiApi:
         """ Return 3 sentences describing the place.  """
         question = self.loc_result()
         title = question[0]
-        resume = wikipedia.summary(title, sentences=3)
+        resume = wikipedia.summary(title, sentences=2)
         time.sleep(2)
         return title, resume
 

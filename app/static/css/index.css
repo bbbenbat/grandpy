@@ -2,6 +2,7 @@
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   background-image:url('/static/img/banc.jpg');
   background-size: cover;
 }
+
 /* For the Google Map*/
 .map {
     height: 200px;
@@ -18,23 +20,24 @@ body {
     width: 100%;
     /* The width is the width of the web page */
 }
+
 #question {
     float : right;
-
 }
+
 #mr {
     text-align : right;
 }
 
 #xbs_loader
 {
-	width: 30px;
-	height: 30px;
-	border: 8px solid #8B4513;
+	width: 50px;
+	height: 50px;
+	border: 8px solid #42f545;
 	border-right-color: transparent;
 	border-radius: 50%;
 	box-shadow: 0 0 25px 2px #eee;
-	float : left;
+	float : right;
 }
 
 #xbs_loader

@@ -18,18 +18,19 @@
 </head>
 <body>
 <div id="principale" class="h-100 container ">
-    <div id="entete" class="card">
-        <div class="card-body text-dark">
-            <h5 class="card-title">GrandPy</h5>
-            <p class="card-text">Racontes-moi une histoire...</p>
+    <div id="entete" class="row-12 bg-light rounded">
+        <div class="col-8 m-1 d-inline-block text-dark">
+            <h1><em>GrandPy</em></h1>
+            <h5><em>Racontes-moi une histoire...</em></h5>
         </div>
+        <div id="xbs_loader" ></div>
     </div>
-    <div id="menu_principal" class="h-75 row border border-primary">
-        <div id="listMsg" class="h-75 row-12 border overflow-hidden mask " style="background-color: rgba(0, 0, 0, 0.6)">
+    <div id="menu_principal" class="h-75 row ">
+        <div id="listMsg" class="h-100 row-12 border overflow-auto mask " style="background-color: rgba(0, 0, 0, 0.7)">
         </div>
-        <div id="saisie" class="h-25 row-12 border border-success">
-            <div id="xbs_loader" ></div>
-            <input type="textarea" id="question" class="col-10 d-inline-block border"
+        <div id="saisie" class="row-12">
+
+            <input type="textarea" id="question" class="col-12 d-inline-block border"
                    onkeypress="return runScript(event)">
         </div>
     </div>

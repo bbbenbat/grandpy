@@ -31,13 +31,12 @@ function search(value){
             $('#xbs_loader').hide();
             document.getElementById("listMsg").innerHTML
                 +=" <div id='mrrobot' class='col'><div id='robot'><img class=\"rounded-circle\" height=\"25px\" src='/static/img/papy.jpg'>"
-                +"Bien sûr mon poussin ! <b>"+result.title+"</b> se trouve au :<br><b>"+result.address+"</b></div> "
+                +"Bien sûr mon poussin ! <b>"+result.title+"</b> se trouve au <b>"+result.address+"</b></div> "
                 +" <div id ='"+idmap+"' class='map' ></div>"
                 +" <div id ='robot'> Mais t'ai-je déjà raconté l'histoire de ce quartier qui m'a vu en culottes courtes ?<br>"+result.resume+"</div></div> ";
             initMap(result.latitude,result.longitude,idmap);
             element = document.getElementById("listMsg");
             element.scrollTop = element.scrollHeight;
-
       }
     });
 }
