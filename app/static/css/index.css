@@ -1,0 +1,51 @@
+/* Set the size of the div element that contains the map */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color:white;
+  background-color:white;
+  background-image:url('/static/img/banc.jpg');
+  background-size: cover;
+}
+/* For the Google Map*/
+.map {
+    height: 200px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+#question {
+    float : right;
+
+}
+#mr {
+    text-align : right;
+}
+
+#xbs_loader
+{
+	width: 30px;
+	height: 30px;
+	border: 8px solid #8B4513;
+	border-right-color: transparent;
+	border-radius: 50%;
+	box-shadow: 0 0 25px 2px #eee;
+	float : left;
+}
+
+#xbs_loader
+{
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin
+{
+	from { transform: rotate(0deg);   opacity: 0.2; }
+	50%  { transform: rotate(180deg); opacity: 1.0; }
+	to   { transform: rotate(360deg); opacity: 0.2; }
+}
+
