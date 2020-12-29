@@ -30,7 +30,18 @@ def test_googleApi_run_api():
     result = GOOGLE_RES
     assert result == req
 
+def mock_googleApi_run_api(self, req):
+    """ Return Googlemaps Api result from run_api(GoogleApi class). """
+    result = GOOGLE_RES
+    return result
 
+def test_googleApi_run(monkeypatch):
+
+    monkeypatch.setattr('app.models.google_api.GoogleApi.run_api', mock_googleApi_run_api)
+
+    req = google_map.run(QUESTION)
+    result = ('Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France', 48.85837009999999, 2.2944813)
+    assert result == req
 
 
 
