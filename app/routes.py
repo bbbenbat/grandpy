@@ -11,8 +11,8 @@ def index():
     return render_template('index.html', title='GrandPyBot')
 
 
-@app.route('/toto', methods=['GET', 'POST'])
-def toto():
+@app.route('/tempo', methods=['GET', 'POST'])
+def tempo():
     # save the question into variable
     req = request.args.get('question')
     # call the parser
@@ -31,16 +31,3 @@ def toto():
     resume = wiki_result[1]
     return jsonify({'title': title, 'address': address, 'resume': resume, 'latitude': latitude, 'longitude': longitude})
 
-
-
-
-
-@app.route('/test')
-def test():
-    return render_template('test.html', latVal=48.85837009999999,
-                           lgtVal=2.2944813)
-
-
-@app.route('/wiki')
-def wiki():
-    return render_template('wiki.html', title=title, resume=resume)

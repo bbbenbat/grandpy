@@ -1,6 +1,9 @@
 import time
+import os
 
 import googlemaps
+
+GOOGLE_KEY = os.getenv('GOOGLE_API_KEY')
 
 
 class GoogleApi:
@@ -8,7 +11,7 @@ class GoogleApi:
 
     def run_api(self, req):
         """  """
-        api_key = 'AIzaSyB6JPe27sHKX8AVcw-D3SZixIDi4ZcJHcM'
+        api_key = GOOGLE_KEY
         gmaps_client = googlemaps.Client(api_key)
         geocode_result = gmaps_client.geocode(req, region='fr', language='fr')
         return geocode_result
@@ -19,3 +22,5 @@ class GoogleApi:
         time.sleep(2)
         result = data[0]
         return result['formatted_address'], result['geometry']['location']['lat'], result['geometry']['location']['lng']
+
+
