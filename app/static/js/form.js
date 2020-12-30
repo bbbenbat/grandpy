@@ -21,7 +21,7 @@ function go(){
     requete = question.value;
     question.value="";
     document.getElementById("listMsg").innerHTML
-    +="<div id='mr' class='col float-right'><img class=\"rounded-circle\"
+    +="<div id='mr' class='col float-right'><img class=\"rounded-circle\""
     +"height=\"20px\" src='/static/img/smile.jpg'><b>  "+requete+"</b></div>";
     search(requete);
     // Automatic descent of the page towards the answer.

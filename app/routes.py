@@ -1,6 +1,8 @@
 """ This module manages the routes of the website.
  It gives a link between an url and a html page.
  It can give arguments to the pages."""
+import os
+
 from flask import render_template, request, jsonify
 
 from app import app
@@ -12,7 +14,8 @@ from app.models import wikipedia_api
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # Return the html page with an argument.
-    return render_template('index.html', title='GrandPyBot')
+    google_api_k = os.getenv('GOOGLE_API_KEY')
+    return render_template('index.html', title='GrandPyBot', google_api_k=google_api_k)
 
 
 @app.route('/tempo', methods=['GET', 'POST'])

@@ -15,6 +15,7 @@ in order to retrieve the coordinates and addresses of the location sought. """
     def run_api(self, req):
         """ The module return the result of the Google Maps API. """
         api_key = GOOGLE_KEY
+        print(api_key)
         gmaps_client = googlemaps.Client(api_key)
         geocode_result = gmaps_client.geocode(req, region='fr', language='fr')
         return geocode_result
@@ -29,3 +30,4 @@ in order to retrieve the coordinates and addresses of the location sought. """
                    'formatted_address'], result[
                    'geometry']['location']['lat'], result[
                    'geometry']['location']['lng']
+
