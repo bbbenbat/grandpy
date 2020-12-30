@@ -13,7 +13,6 @@ load_dotenv(dotenv_path)
 app = Flask(__name__)
 # to encrypt the data
 app.config.from_object(Config)
-port = int(os.environ.get("PORT", 5000))
-app.run(host='0.0.0.0', port=port)
+
 # to avoid circular import
 from app import routes
