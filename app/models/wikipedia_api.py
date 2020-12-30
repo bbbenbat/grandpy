@@ -17,7 +17,8 @@ class WikiApi:
 
     def loc_result(self):
         """ Find the location name by these coordinates. """
-        question = (wikipedia.geosearch(self.latitude, self.longitude, results=1))
+        question = (wikipedia.geosearch(
+            self.latitude, self.longitude, results=1))
         return question
 
     def resum_result(self):

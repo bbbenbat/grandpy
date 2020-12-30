@@ -4,7 +4,7 @@ from app.controllers import parser
 
 pars = parser.Checkdata()
 
-#CONSTANTS
+# CONSTANTS
 QUESTION = "Salut GrandPy, comment vas-tu? " \
            "Peux-tu me dire où se trouve l'Arc de Triomphe?"
 

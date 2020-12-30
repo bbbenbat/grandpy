@@ -20,9 +20,12 @@ in order to retrieve the coordinates and addresses of the location sought. """
         return geocode_result
 
     def run(self, req):
-        """ This module filters the data and returns the address and geographic coordinates. """
+        """ This module filters the data and returns
+        the address and geographic coordinates. """
         data = self.run_api(req)
         time.sleep(2)
         result = data[0]
-        return result['formatted_address'], result['geometry']['location']['lat'], \
-               result['geometry']['location']['lng']
+        return result[
+                   'formatted_address'], result[
+                   'geometry']['location']['lat'], result[
+                   'geometry']['location']['lng']
