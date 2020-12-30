@@ -1,6 +1,7 @@
 """  """
 
 import time
+
 import wikipedia
 
 
@@ -24,5 +25,3 @@ class WikiApi:
         resume = wikipedia.summary(title, sentences=2)
         time.sleep(2)
         return title, resume
-
-
