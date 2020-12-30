@@ -1,5 +1,6 @@
 """
-
+This module allows you to manage the processing of a sentence in order to
+find the keywords for internet research.
 """
 import json
 import re
@@ -7,10 +8,8 @@ import string
 
 
 class Checkdata:
-    """  """
-
-    def __init__(self):
-        pass
+    """ this class contains several methods which allow
+    you to find the keywords of a sentence.  """
 
     def low_case(self, req):
         """ Change all caracters in low-case. """
@@ -18,7 +17,8 @@ class Checkdata:
 
     def delete_punctuation(self, req):
         """ Replace all punctuation by whitespace. """
-        replace_punctuation = str.maketrans(string.punctuation, ' ' * len(string.punctuation))
+        replace_punctuation = str.maketrans(
+            string.punctuation, ' ' * len(string.punctuation))
         text = req.translate(replace_punctuation)
         text = re.sub(' +', ' ', text)
         return text

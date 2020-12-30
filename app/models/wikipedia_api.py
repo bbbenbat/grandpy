@@ -1,4 +1,5 @@
-"""  """
+""" This module establishes a connection to the wikipedia API in order
+to retrieve information on the address sought. """
 
 import time
 
@@ -6,7 +7,8 @@ import wikipedia
 
 
 class WikiApi:
-    """  """
+    """ This class is used to establish a connection to the wikipedia
+    API and return a description of the address sought. """
 
     def __init__(self, latitude, longitude):
         wikipedia.set_lang("fr")
@@ -19,7 +21,7 @@ class WikiApi:
         return question
 
     def resum_result(self):
-        """ Return 3 sentences describing the place.  """
+        """ Return 2 sentences describing the place.  """
         question = self.loc_result()
         title = question[0]
         resume = wikipedia.summary(title, sentences=2)

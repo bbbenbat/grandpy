@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-/* For the Google Map*/
+/* For the Google Map */
 .map {
     height: 200px;
     /* The height is 400 pixels */
@@ -29,6 +29,7 @@ body {
     text-align : right;
 }
 
+/* For the loader animation */
 #xbs_loader
 {
 	width: 50px;

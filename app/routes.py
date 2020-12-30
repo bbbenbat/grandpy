@@ -1,3 +1,6 @@
+""" This module manages the routes of the website.
+ It gives a link between an url and a html page.
+ It can give arguments to the pages."""
 from flask import render_template, request, jsonify
 
 from app import app
@@ -8,6 +11,7 @@ from app.models import wikipedia_api
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    # Return the html page with an argument.
     return render_template('index.html', title='GrandPyBot')
 
 
@@ -29,5 +33,5 @@ def tempo():
     wiki_result = wiki_api.resum_result()
     title = wiki_result[0]
     resume = wiki_result[1]
-    return jsonify({'title': title, 'address': address, 'resume': resume, 'latitude': latitude, 'longitude': longitude})
-
+    return jsonify({'title': title, 'address': address, 'resume': resume,
+                    'latitude': latitude, 'longitude': longitude})
