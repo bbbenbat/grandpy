@@ -34,7 +34,7 @@ function go(){
 function search(value){
     jQuery.ajax({
           type:'GET',
-          url:'https://0.0.0.0:5000/tempo',
+          url:'/tempo',
           data:'question='+value,
           success:function(result){
             idmap = Math.random().toString(36).slice(-8);
