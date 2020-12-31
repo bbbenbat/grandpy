@@ -32,7 +32,7 @@ class Checkdata:
 
     def find_word(self, req):
         """ Clean the string with keyword. """
-        path_json = '../models/fr.json'
+        path_json = '/app/models/fr.json'
         clean_list = []
         result = ""
         with open(path_json) as f:
