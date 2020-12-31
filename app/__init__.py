@@ -1,4 +1,6 @@
 import os
+import logging
+import sys
 
 from dotenv import load_dotenv
 from flask import Flask
@@ -16,3 +18,6 @@ app = Flask(__name__)
 
 # to avoid circular import
 from app import routes
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
