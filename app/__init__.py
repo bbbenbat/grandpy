@@ -11,6 +11,7 @@ dotenv_path = os.path.join(APP_ROOT, '.env')
 load_dotenv(dotenv_path)
 
 app = Flask(__name__)
+app.run(debug=True)
 # to encrypt the data
 app.config.from_object(Config)
 
