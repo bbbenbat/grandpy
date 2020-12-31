@@ -34,7 +34,7 @@ class Checkdata:
         """ Clean the string with keyword. """
         clean_list = []
         result = ""
-        with open('app/models/fr.json') as f:
+        with open('D:/OCR/P7 - GrandPy/grandpy/app/models/fr.json') as f:
             data = json.load(f)
         data = data['key_words']
         for var in req:
@@ -47,8 +47,11 @@ class Checkdata:
 
     def parser_complet(self, req):
         """ Use all methods from the Class to parse 'req'. """
-        req = self.low_case(req)
-        req = self.delete_punctuation(req)
-        req = self.create_list(req)
-        req = self.find_word(req)
-        return req
+        if req == '':
+            return 0
+        else:
+            req = self.low_case(req)
+            req = self.delete_punctuation(req)
+            req = self.create_list(req)
+            req = self.find_word(req)
+            return req

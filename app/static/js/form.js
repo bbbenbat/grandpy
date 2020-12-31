@@ -37,6 +37,7 @@ function search(value){
           url:'/tempo',
           data:'question='+value,
           success:function(result){
+            if (result.val === 0) {
             idmap = Math.random().toString(36).slice(-8);
             $('#xbs_loader').hide();
             document.getElementById("listMsg").innerHTML
@@ -51,6 +52,17 @@ function search(value){
             // Automatic descent of the page towards the answer.
             element = document.getElementById("listMsg");
             element.scrollTop = element.scrollHeight;
+            } else {
+            idmap = Math.random().toString(36).slice(-8);
+            $('#xbs_loader').hide();
+            document.getElementById("listMsg").innerHTML
+                +=" <div id='mrrobot' class='col'><div id='robot'>"
+                +"<img class=\"rounded-circle\" height=\"25px\" src='/static/img/papy.jpg'>"
+                +"Désolé mon petit, je n'ai pas bien compris ta question...</div>";
+            // Automatic descent of the page towards the answer.
+            element = document.getElementById("listMsg");
+            element.scrollTop = element.scrollHeight;
+            }
       }
     });
 }

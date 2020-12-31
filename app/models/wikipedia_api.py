@@ -24,7 +24,10 @@ class WikiApi:
     def resum_result(self):
         """ Return 2 sentences describing the place.  """
         question = self.loc_result()
-        title = question[0]
-        resume = wikipedia.summary(title, sentences=2)
-        time.sleep(2)
-        return title, resume
+        if question == []:
+            return 0
+        else:
+            title = question[0]
+            resume = wikipedia.summary(title, sentences=2)
+            time.sleep(2)
+            return title, resume
