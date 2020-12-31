@@ -32,10 +32,10 @@ class Checkdata:
 
     def find_word(self, req):
         """ Clean the string with keyword. """
-        path_json = '/app/models/fr.json'
+        path_json = '/'
         clean_list = []
         result = ""
-        with open(path_json) as f:
+        with open('app/models/fr.json') as f:
             data = json.load(f)
         data = data['key_words']
         for var in req:
