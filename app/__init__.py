@@ -14,7 +14,7 @@ load_dotenv(dotenv_path)
 
 app = Flask(__name__)
 # to encrypt the data
-#app.config.from_object(Config)
+app.config.from_object(Config)
 
 # to avoid circular import
 from app import routes
