@@ -33,7 +33,7 @@ function go(){
 // Processing with Ajax to display the response.
 function search(value){
     jQuery.ajax({
-          type:'GET',
+          type:'POST',
           url:'/tempo',
           data:'question='+value,
           success:function(result){
