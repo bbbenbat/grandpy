@@ -34,7 +34,7 @@ function go(){
 function search(value){
     jQuery.ajax({
           type:'GET',
-          url:'https://grandpy-p7-bb.herokuapp.com:5000/tempo',
+          url:'https://grandpy-p7-bb.herokuapp.com:5000/app/tempo',
           data:'question='+value,
           success:function(result){
             idmap = Math.random().toString(36).slice(-8);
