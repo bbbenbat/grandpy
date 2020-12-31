@@ -34,7 +34,7 @@ class Checkdata:
         """ Clean the string with keyword. """
         clean_list = []
         result = ""
-        with open('D:/OCR/P7 - GrandPy/grandpy/app/models/fr.json') as f:
+        with open('app/models/fr.json') as f:
             data = json.load(f)
         data = data['key_words']
         for var in req:
