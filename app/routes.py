@@ -18,7 +18,7 @@ def index():
     return render_template('index.html', title='GrandPyBot', google_api_k=google_api_k)
 
 
-@app.route('/tempo', methods=['GET', 'POST'])
+@app.route('/tempo', methods=['POST'])
 def tempo():
     # save the question into variable
     req = request.args.get('question')
