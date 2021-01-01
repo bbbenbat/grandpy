@@ -61,7 +61,7 @@ function search(value){
                 +"Désolé mon petit, je n'ai pas bien compris ta question...</div>";
             // Automatic descent of the page towards the answer.
             element = document.getElementById("listMsg");
-            element.scrollTop = element.scrollHeight;
+            element.scrollTop = element.scrollHeight;nn
             }
       }
     });

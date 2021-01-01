@@ -5,7 +5,7 @@ import time
 
 import googlemaps
 
-GOOGLE_KEY = os.getenv('GOOGLE_API_KEY')
+GOOGLE_KEY = os.getenv('GOOGLE_API_KEY_B')
 
 
 class GoogleApi:
