@@ -1,15 +1,19 @@
 # GrandPY
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 Ce projet concerne un site internet permettant de parler à un papy robot afin 
-de lui demander une adresse. Il vous le donnera (via l'API GoogleMaps)
+de lui demander une adresse. 
+
+Il vous le donnera (via l'API GoogleMaps)
 avec, en bonus, une histoire sur ce lieu (via l'API Wikipedia).
 
 ## Pour commencer
 
-Vous devez avoir un environnement type 'Heroku' afin de déposer le dossier.
-L'application utilisant l'API de Google Maps avec une clé privée, il vous faudra en créer une sur le site 
+Vous devez posséder un compte Heroku afin de déposer le dossier.
+
+L'application utilisant l'API de Google Maps avec deux clés privées, il vous faudra les créer sur le site 
 officiel de Google https://console.cloud.google.com.
 
 
@@ -17,56 +21,88 @@ officiel de Google https://console.cloud.google.com.
 
 Avant tout chose, vous devez:
 
-- télécharger le contenu du dossier 'grandpy'
-- Programme 2
-- etc...
+- avoir un compte Heroku.
+- deux clés API GoogleMaps. 
+- avoir installé Git sur son ordinateur.
+- avoir installé Python sur son ordinateur.
+- avoir installé le logiciel Heroku (https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
 
 ### Installation
 
-Les étapes pour installer votre programme....
+##### Clé API Google
+Une fois que vous avez créé les deux clés, il faudra appliquer une restriction HTTP sur une clé. Insérer en valeur 
+l'url de votre application Heroku (voir section Heroku).
 
-Dites ce qu'il faut faire...
+##### Préparation dossier
+Faites une copie du repository sur votre ordinateur : git clone https://github.com/bbbenbat/grandpy.git.
+Créer un fichier .env à la racine du dossier.
+Ouvrer le fichier, puis enregistrer la clé n'ayant pas de restriction, sous la clé 'GOOGLE_API_KEY_B'.
+Enregistrer la deuxième clé, ayant la restriction, sous la clé 'GOOGLE_API_KEY'.
+```
+GOOGLE_API_KEY = 'cle_avec_restriction'
+GOOGLE_API_KEY_B = 'cle_sans_restriction'
+```
 
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
+##### Heroku
+Ouvrer la console et entrer.
+```
+$ heroku login
+```
+aller sur le dossier telechargé.
+```
+$ cd grandpy
+```
+Créer l'application sur le site Heroku
+```
+$ heroku create
+```
+L'url du site créé s'affiche, la copier et l'enregister dans la restriction HTTP de la clé Google.
+```
+remote:        Done: 57.1M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://serene-caverns-82714.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+```
+Faire un commit sur le git local.
+```
+git commit -m "Demo"
+```
+Publier votre dossier sur heroku.
+```
+git push heroku main
+```
+Aller sur la console web du site Heroku et saisir les variables d'environnements 
+contenu dans le fichier .env, dans l'onglet 'setting' section 'Config Vars'.
 
-
-Ensuite vous pouvez montrer ce que vous obtenez au final...
+Le site est maintenant fonctionnel!
 
 ## Démarrage
 
-Dites comment faire pour lancer votre projet
+Aller sur l'adresse de votre site.
+Vous arrivez sur la page principale.
+Poser votre question à GrandPy, il se fera un plaisir de vous répondre. 
+
 
 ## Fabriqué avec
 
-Entrez les programmes/logiciels/ressources que vous avez utilisé pour développer votre projet
-
-_exemples :_
-* [Materialize.css](http://materializecss.com) - Framework CSS (front-end)
-* [Atom](https://atom.io/) - Editeur de textes
+* [Materialize.css](https://flask.palletsprojects.com/en/1.1.x/) - Serveur web local
+* [Bootstrap](https://getbootstrap.com/) - Framework CSS (front-end)
+* [GoogleMaps API](https://console.cloud.google.com/) - API Google Maps
+* [Wikipedia API](https://wikipedia.readthedocs.io/en/latest/) - API Wikipedia
 
 ## Contributing
 
-Si vous souhaitez contribuer, lisez le fichier [CONTRIBUTING.md](https://example.org) pour savoir comment le faire.
+Si vous souhaitez contribuer, cliquer sur [CONTRIBUTING.md](https://github.com/bbbenbat/grandpy) pour soumettre votre pull request.
 
 ## Versions
-Listez les versions ici 
-_exemple :_
-**Dernière version stable :** 5.0
-**Dernière version :** 5.1
-Liste des versions : [Cliquer pour afficher](https://github.com/your/project-name/tags)
-_(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
+
+**Dernière version stable :** 1.0
+
 
 ## Auteurs
-Listez le(s) auteur(s) du projet ici !
-* **Jhon doe** _alias_ [@outout14](https://github.com/outout14)
 
-Lisez la liste des [contributeurs](https://github.com/your/project/contributors) pour voir qui à aidé au projet !
-
-_(pour le lien mettez simplement l'URL de votre projet suivi de ``/contirubors``)_
-
-## License
-
-Ce projet est sous licence ``exemple: WTFTPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
-
+* **Ben Bessayah** _alias_ [@bbbenbat](https://github.com/bbbenbat)
 
 
