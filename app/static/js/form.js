@@ -34,7 +34,7 @@ function go(){
 function search(value){
     jQuery.ajax({
           type:'GET',
-          url:'https://grandpy-p7-bb.herokuapp.com/tempo',
+          url:'/tempo',
           data:'question='+value,
           success:function(result){
             if (result.val === 0) {
