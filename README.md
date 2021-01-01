@@ -11,7 +11,7 @@ avec, en bonus, une histoire sur ce lieu (via l'API Wikipedia).
 
 ## Pour commencer
 
-Vous devez posséder un compte Heroku afin de déposer le dossier.
+Vous devez posséder un compte Heroku afin de déposer le dossier via ce site.
 
 L'application utilisant l'API de Google Maps avec deux clés privées, il vous faudra les créer sur le site 
 officiel de Google https://console.cloud.google.com.
@@ -21,19 +21,19 @@ officiel de Google https://console.cloud.google.com.
 
 Avant tout chose, vous devez:
 
-- avoir un compte Heroku.
-- deux clés API GoogleMaps. 
-- avoir installé Git sur son ordinateur.
-- avoir installé Python sur son ordinateur.
+- avoir un compte Heroku (https://www.heroku.com).
+- deux clés API GoogleMaps (https://console.cloud.google.com). 
+- avoir installé Git sur son ordinateur (https://git-scm.com/downloads).
+- avoir installé Python sur son ordinateur (https://www.python.org/downloads/).
 - avoir installé le logiciel Heroku (https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
 
 ### Installation
 
-##### Clé API Google
+#### Clé API Google
 Une fois que vous avez créé les deux clés, il faudra appliquer une restriction HTTP sur une clé. Insérer en valeur 
 l'url de votre application Heroku (voir section Heroku).
 
-##### Préparation dossier
+#### Préparation dossier
 Faites une copie du repository sur votre ordinateur : git clone https://github.com/bbbenbat/grandpy.git.
 Créer un fichier .env à la racine du dossier.
 Ouvrer le fichier, puis enregistrer la clé n'ayant pas de restriction, sous la clé 'GOOGLE_API_KEY_B'.
@@ -43,7 +43,7 @@ GOOGLE_API_KEY = 'cle_avec_restriction'
 GOOGLE_API_KEY_B = 'cle_sans_restriction'
 ```
 
-##### Heroku
+#### Heroku
 Ouvrer la console et entrer.
 ```
 $ heroku login
@@ -87,7 +87,7 @@ Poser votre question à GrandPy, il se fera un plaisir de vous répondre.
 
 ## Fabriqué avec
 
-* [Materialize.css](https://flask.palletsprojects.com/en/1.1.x/) - Serveur web local
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Serveur web local
 * [Bootstrap](https://getbootstrap.com/) - Framework CSS (front-end)
 * [GoogleMaps API](https://console.cloud.google.com/) - API Google Maps
 * [Wikipedia API](https://wikipedia.readthedocs.io/en/latest/) - API Wikipedia
