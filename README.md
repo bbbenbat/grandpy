@@ -2,17 +2,22 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
 
-Une petite description du projet
+Ce projet concerne un site internet permettant de parler à un papy robot afin 
+de lui demander une adresse. Il vous le donnera (via l'API GoogleMaps)
+avec, en bonus, une histoire sur ce lieu (via l'API Wikipedia).
 
 ## Pour commencer
 
-Entrez ici les instructions pour bien débuter avec votre projet...
+Vous devez avoir un environnement type 'Heroku' afin de déposer le dossier.
+L'application utilisant l'API de Google Maps avec une clé privée, il vous faudra en créer une sur le site 
+officiel de Google https://console.cloud.google.com.
+
 
 ### Pré-requis
 
-Ce qu'il est requis pour commencer avec votre projet...
+Avant tout chose, vous devez:
 
-- Programme 1
+- télécharger le contenu du dossier 'grandpy'
 - Programme 2
 - etc...
 
