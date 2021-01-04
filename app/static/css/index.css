@@ -26,6 +26,22 @@ a:link
     /* The width is the width of the web page */
 }
 
+header{
+    height : 10%;
+}
+#title{
+  position:absolute;
+  z-index: 2;
+}
+#main_content{
+    height : 85%;
+}
+
+#listMsg{
+    height : 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 #question {
     float : right;
 }
@@ -39,11 +55,14 @@ a:link
 {
 	width: 50px;
 	height: 50px;
-	border: 8px solid #42f545;
+	border: 8px solid #FF33E6;
 	border-right-color: transparent;
 	border-radius: 50%;
 	box-shadow: 0 0 25px 2px #eee;
-	float : right;
+	position : absolute;
+	right : 5%;
+	top : 1%;
+	z-index: 1;
 }
 
 #xbs_loader

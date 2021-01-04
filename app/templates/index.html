@@ -17,28 +17,32 @@
     <title>{{title}}</title>
 </head>
 <body>
-<div id="principale" class="h-100 container ">
-    <div id="entete" class="row-12 bg-light rounded">
-        <div class="col-8 m-1 d-inline-block text-dark">
-            <h1><em>GrandPy</em></h1>
-            <h5><em>Racontes-moi une histoire...</em></h5>
+<header>
+    <div id="entete" class="row bg-light rounded">
+        <div id="title" class="row-12 m-1 text-dark text-center">
+            <h2><em>GrandPy</em></h2>
+            <h6><em>Racontes-moi une histoire...</em></h6>
         </div>
         <div id="xbs_loader"></div>
     </div>
-    <div id="menu_principal" class="h-75 row ">
-        <div id="listMsg" class="h-100 col-12 border overflow-auto mask " style="background-color: rgba(0, 0, 0, 0.7)">
+</header>
+<section id="main_content" class="container">
+    <div id="menu_principal" class="h-100 row ">
+        <div id="listMsg" class=" col-12 border overflow-auto mask ">
         </div>
         <div id="saisie" class="col-12">
 
             <input type="text" id="question" class="col-12 d-inline-block border"
                    onkeypress="return runScript(event)">
-            <div id="bas" class="col-12 ">
-                <a id="nom" href="https://github.com/bbbenbat/grandpy" class="d-inline-block text-dark"><b>Auteur : Ben Bessayah.</b></a>
-                <a id="github" href="https://github.com/bbbenbat/grandpy" class="d-inline-block text-dark"><b>GITHUB</b></a>
-            </div>
         </div>
     </div>
-</div>
+</section>
+<footer>
+    <div id="bas" class="row-12 text-center">
+        <a id="nom" href="https://github.com/bbbenbat/grandpy" class="text-dark">
+            <b>Auteur : Ben Bessayah. GITHUB</b></a>
+    </div>
+</footer>
 <!-- Background image -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
