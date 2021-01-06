@@ -26,6 +26,40 @@ Avant tout chose, vous devez:
 - avoir installé Git sur son ordinateur (https://git-scm.com/downloads).
 - avoir installé Python sur son ordinateur (https://www.python.org/downloads/).
 - avoir installé le logiciel Heroku (https://devcenter.heroku.com/articles/getting-started-with-python#set-up)
+- télécharger le dossier "grandpy"
+
+Vérifier que le dossier "grandpy" contient :
+- app 
+    * __init__.py
+    * routes.py
+    * controllers 
+        * __init__.py
+        * parser.py
+    * models 
+        * __init__.py
+        * fr.json
+        * google_api.py
+        * wikipedia_api.py
+    * static 
+        * css
+            * index.css
+        * img
+            * banc.jpg
+            * papy.jpg
+            * smile.jpg
+        * js
+            * form.js
+    * templates
+        * index.html
+- test
+    * __init__.py
+    * test_google_api.py
+    * test_parser.py
+    * test_wikipedia_api.py
+- README.md
+- config.py
+- Procfile
+- requirements.txt
 
 ### Installation
 
